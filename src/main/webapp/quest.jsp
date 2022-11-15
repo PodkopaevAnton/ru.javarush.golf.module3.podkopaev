@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Antony
-  Date: 13.11.2022
-  Time: 20:49
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -29,35 +22,43 @@
                 border: 3px solid black;
                 padding: 5px;
                 position: absolute;
-                top: 70%;
+                top: 60%;
                 left: 10%
             }
         </style>
     <body>
 <%--    </section>--%>
-        <h2 class="text-center">${question}</h2>
 <%--        <section>--%>
-        <form action="hello-servlet" method="get" class="serv">
-            <c:forEach items="${answers.keySet()}" var="answer">
-                <div class="form-check">
-                    <label class="form-check-label"><input type="radio" name="id" value="${answer}" checked> ${answers.get(answer)}</label>
-                </div>
-            </c:forEach>
-<%--        </section>--%>
-            <p>
+    <div class="container text-center" >
+        <div class="row-align-items-center">
+            <div class = "col-9"></div>
+            <br><br>
+            <h2 >${question}</h2>
+            <br><br>
+            <form action="hello-servlet" method="get" class="serv">
+                <c:forEach items="${answers.keySet()}" var="answer">
+                    <div class="form-check">
+                        <label class="form-check-label"><input type="radio" name="id" value="${answer}" checked> ${answers.get(answer)}</label>
+                    </div>
+                </c:forEach>
+    <%--        </section>--%>
+                <p>
 
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <button type="submit" class="btn btn-warning">${answers == null ? "Заново" :"Выбрать"}</button>
-                </div>
-            </p>
-        </form>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" class="btn btn-warning">${answers == null ? "Заново" :"Выбрать"}</button>
+                    </div>
+                </p>
+            </form>
+            </div>
+        </div>
+    </div>
 <br>
     <section class="info">
         <p>Статистика:</p>
         <p >Имя в игре: ${name}</p>
         <p >id сессии: ${sessionId}</p>
         <p >ip address: ${sessionIp}</p>
-        <p >Количество игр: ${countGames}</p>
+        <p >Количество игр: ${counter}</p>
     </section>
 <%--    </section>--%>
     </body>
