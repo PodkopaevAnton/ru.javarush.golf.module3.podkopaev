@@ -29,7 +29,6 @@
                     <input type="text" id="input_name_new" name="name" required size ="12" maxLength="12" >
                 <button  type="submit" class="btn btn-warning " name="countGames" value="0">Подобрать</button>
             </div>
-        <%--<a href="hello-servlet">Hello Servlet</a>--%>
         </form>
     </div>
 </body>
