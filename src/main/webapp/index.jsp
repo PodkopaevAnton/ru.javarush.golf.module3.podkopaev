@@ -20,12 +20,22 @@
         <h1 class="text-center"><%= "Интересная находка"%></h1>
         <p class="text-center">Ты быстрее побежал домой. Открыв дверь, ты обнаружил на полу необычное колечко.</p>
 
+<<<<<<< HEAD
         <p class="text-center">Хочешь ли ты подобрать его?</p>
+=======
+        <p class="text-center">Введи свое имя и подбери кольцо</p>
+>>>>>>> f1b362a (second)
         <br><br>
         <form action="hello-servlet" method="get">
             <input hidden name="id" value="1">
             <div class="d-grid gap-2 col-6 mx-auto">
+<<<<<<< HEAD
                 <button  type="submit" class="btn btn-warning ">Подобрать</button>
+=======
+                    <label for="input_name_new" >Имя:</label>
+                    <input type="text" id="input_name_new" name="name" required size ="12" maxLength="12" >
+                <button  type="submit" class="btn btn-warning " name="countGames" value="0">Подобрать</button>
+>>>>>>> f1b362a (second)
             </div>
         <%--<a href="hello-servlet">Hello Servlet</a>--%>
         </form>

@@ -1,6 +1,10 @@
 package ru.javarush.quest;
 
 import java.io.*;
+<<<<<<< HEAD
+=======
+import java.net.Inet4Address;
+>>>>>>> f1b362a (second)
 import java.util.Map;
 import java.util.Objects;
 import javax.servlet.ServletException;
@@ -17,6 +21,25 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+<<<<<<< HEAD
+=======
+
+
+        HttpSession session = request.getSession();
+
+        String name = request.getParameter("name");
+        String countGames = request.getParameter("countGames");
+        if(name != null) {
+            session.setAttribute("name", name);
+//            int count = Integer.parseInt(countGames);
+//            count = count+1;
+//            session.setAttribute("countGames",count);
+        }
+        session.setAttribute("ip", Inet4Address.getLocalHost().getHostAddress());
+        String ip = (String) session.getAttribute("ip");
+        String sessionId = session.getId();
+
+>>>>>>> f1b362a (second)
         String id = request.getParameter("id");
             if (gameService.checkLose(id)){
                 response.sendRedirect("index.jsp");
@@ -26,6 +49,13 @@ public class HelloServlet extends HttpServlet {
                 Map<Integer, String> answers = gameService.getAnswersById(intId);
                 request.setAttribute("question", question);
                 request.setAttribute("answers", answers);
+<<<<<<< HEAD
+=======
+//                request.setAttribute("countGames",countGames);
+                request.setAttribute("name", name);
+                request.setAttribute("sessionIp",ip);
+                request.setAttribute("sessionId",sessionId);
+>>>>>>> f1b362a (second)
                 request.getRequestDispatcher("quest.jsp").forward(request, response);
             }
     }

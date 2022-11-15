@@ -1,8 +1,11 @@
 package ru.javarush.quest;
 
 import ru.javarush.quest.entities.Question;
+<<<<<<< HEAD
 import ru.javarush.quest.repositories.AnswerRepository;
 import ru.javarush.quest.repositories.QuestionRepository;
+=======
+>>>>>>> f1b362a (second)
 
 import java.util.Map;
 import java.util.Objects;
