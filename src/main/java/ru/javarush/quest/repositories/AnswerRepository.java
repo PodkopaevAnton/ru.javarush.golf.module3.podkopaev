@@ -9,10 +9,10 @@ public class AnswerRepository {
     private final Map<Integer, Answer> answers = new HashMap<>();
 
     public AnswerRepository() {
-        answers.put(1,new Answer(1,"Да",2));
-        answers.put(2,new Answer(1,"Нет",0));
-        answers.put(3,new Answer(2,"Нет. Я оставлю его себе!",0));
-        answers.put(4,new Answer(2,"Да. Я отнесу кольцо",3));
+        answers.put(1,new Answer(1,"Нет",0));
+        answers.put(2,new Answer(1,"Да",2));
+        answers.put(3,new Answer(2,"Да. Я отнесу кольцо",3));
+        answers.put(4,new Answer(2,"Нет. Я оставлю его себе!",0));
         answers.put(5,new Answer(3,"Я сам его уничтожу",4));
         answers.put(6,new Answer(3,"Оставлю его себе! Оно мое, мое!",0));
         answers.put(7,new Answer(4,"Врата Рохана",0));

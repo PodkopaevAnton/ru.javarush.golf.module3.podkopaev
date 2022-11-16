@@ -38,13 +38,16 @@ public class HelloServlet extends HttpServlet {
         String sessionId = session.getId();
 
         String id = request.getParameter("id");
-            if (gameService.checkLose(id)){
-                session.setAttribute("counter", counter+1);
+            if (gameService.checkLose(id)) {
+                session.setAttribute("counter", counter + 1);
+                response.sendRedirect("index.jsp");
+            }else if(gameService.checkWin(id)){
+
                 response.sendRedirect("index.jsp");
             }else{
                 int intId = Integer.parseInt(id);
                 String question = gameService.getQuestionById(intId);
-                Map<Integer, String> answers = gameService.getAnswersById(intId);
+                Map<String, Integer> answers = gameService.getAnswersById(intId);
                 request.setAttribute("question", question);
                 request.setAttribute("answers", answers);
                 request.setAttribute("name", name);
