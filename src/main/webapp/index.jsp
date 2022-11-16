@@ -10,7 +10,11 @@
 
 </head>
     <body>
-            <div class="startPage" >
+<%--            <div class="startPage" >--%>
+        <div class="container text-center" >
+            <%--        <div class="shadow-lg p-3 mb-5 bg-body rounded">--%>
+            <div class="row-align-items-center">
+                    <br><br>
                     <h1 class="text-center fw-bold"><%= "Пролог" %>
                     </h1>
                     <p class="text-center" >В Хоббитании дела шли своим чередом. Люди там жили веселые и отходчивые.
@@ -32,6 +36,8 @@
                     </form>
                     <br><br>
             </div>
+        </div>
+<%--            </div>--%>
         <div class="container">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                 <div class="col-md-4 d-flex align-items-center">
