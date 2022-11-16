@@ -9,7 +9,6 @@
 </head>
         <style>
             section{
-                /*border: 3px solid black;*/
                 padding: 5px;
                 position: absolute;
                 top: 60%;
@@ -24,7 +23,7 @@
                         <br><br>
                         <h2 class="text-center fw-bold">${question}</h2>
                         <br><br>
-                        <form action="hello-servlet" method="get" class="serv">
+                        <form action="gameServlet" method="get" class="serv">
                             <c:forEach items="${answers.keySet()}" var="answer">
                                 <div class="form-check">
                                     <label class="form-check-label"><input type="radio" name="id" value="${answers.get(answer)}" checked> ${answer}</label>
@@ -41,23 +40,27 @@
                 </div>
 <%--        </div>--%>
     <section class="info">
-        <p class="fs-5">Статистика:</p>
-        <p class="fs-6">Имя в игре: ${name}</p>
-        <p class="fs-6">id сессии: ${sessionId}</p>
-        <p class="fs-6">ip address: ${sessionIp}</p>
-        <p class="fs-6">Количество игр: ${counter}</p>
+        <table class="table">
+            <thead>
+            <tr class="table-light">
+                <th class="text-center" scope="col">Статистика</th>
+                <th class="text-center" scope="col">Имя в игре</th>
+                <th class="text-center" scope="col">ip address</th>
+                <th class="text-center" scope="col">Количество игр</th>
+                <th class="text-center" scope="col">Количество побед</th>
+            </tr>
+            </thead>
+            <tbody class="table-group-divider table-info">
+            <tr class="table-info">
+                <th scope="row" class="text-center">#</th>
+                <td class="text-center">${name}</td>
+                <td class="text-center">${sessionIp}</td>
+                <td class="text-center">${counter}</td>
+                <td class="text-center">${winCounter}</td>
+            </tr>
+            </tbody>
+        </table>
     </section>
     </div>
-
-
-<%--    <div class="shadow-sm p-3 mb-5 bg-body rounded">--%>
-<%--        <section class="info">--%>
-<%--            <p class="fs-5">Статистика:</p>--%>
-<%--            <p class="fs-6">Имя в игре: ${name}</p>--%>
-<%--            <p class="fs-6">id сессии: ${sessionId}</p>--%>
-<%--            <p class="fs-6">ip address: ${sessionIp}</p>--%>
-<%--            <p class="fs-6">Количество игр: ${counter}</p>--%>
-<%--        </section>--%>
-<%--    </div>--%>
     </body>
 </html>
