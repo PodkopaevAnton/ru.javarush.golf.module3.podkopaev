@@ -1,16 +1,15 @@
-package ru.javarush.quest;
+package ru.javarush.quest.controller;
 
 import java.io.*;
 import java.net.Inet4Address;
 
 import java.util.Map;
-import java.util.Objects;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet(name = "gameServlet", value = "/gameServlet")
+public class GameServlet extends HttpServlet {
 
     private GameService gameService;
 
@@ -23,10 +22,13 @@ public class HelloServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         Integer counter = (Integer)session.getAttribute("counter");
+        Integer winCounter = (Integer)session.getAttribute("winCounter");
         String name = request.getParameter("name");
         if(counter == null){
             session.setAttribute("counter", 1);
+            session.setAttribute("winCounter", 0);
             counter = 1;
+            winCounter=0;
         }
 
         if(name != null) {
@@ -40,9 +42,10 @@ public class HelloServlet extends HttpServlet {
         String id = request.getParameter("id");
             if (gameService.checkLose(id)) {
                 session.setAttribute("counter", counter + 1);
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("lose.jsp");
             }else if(gameService.checkWin(id)){
-
+                session.setAttribute("winCounter", winCounter + 1);
+                session.setAttribute("counter", counter + 1);
                 response.sendRedirect("index.jsp");
             }else{
                 int intId = Integer.parseInt(id);

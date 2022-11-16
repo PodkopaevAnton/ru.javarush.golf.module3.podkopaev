@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Антон
-  Date: 16.11.2022
-  Time: 9:55
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,6 +7,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <div class="container text-center" >
+        <div class="row-align-items-center">
+            <br><br>
+            <h1 class="text-center fw-bold"><%= "Поражение" %></h1>
+            <p class="text-center" >
+            Вы не смогли выполнить задачу
+            </p>
+            <form  action="index.jsp" method="post">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-primary btn btn-danger">Заново</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

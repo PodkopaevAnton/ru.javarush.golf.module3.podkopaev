@@ -10,19 +10,17 @@
 
 </head>
     <body>
-<%--            <div class="startPage" >--%>
         <div class="container text-center" >
-            <%--        <div class="shadow-lg p-3 mb-5 bg-body rounded">--%>
             <div class="row-align-items-center">
                     <br><br>
                     <h1 class="text-center fw-bold"><%= "Пролог" %>
                     </h1>
                     <p class="text-center" >В Хоббитании дела шли своим чередом. Люди там жили веселые и отходчивые.
-                        Раздные праздники были для них особой усладой. Сегодня как раз один из таких! На такое событие приехал
+                        Разные праздники были для них особой усладой. Сегодня как раз один из таких! На такое событие приехал
                         ваш старый знакомый. Высокий старик с большой шляпой и посохом. Пир был на весь мир,и в пылу ты потерял своего дядю!
                     </p>
                     <h1 class="text-center fw-bold"><%= "Интересная находка"%></h1>
-                    <p class="text-center">Ты быстрее побежал домой. Открыв дверь, ты обнаружил на полу необычное колечко.</p>
+                    <p class="text-center">Ты быстро побежал домой. Открыв дверь, ты обнаружил на полу необычное колечко.</p>
 
                     <p class="text-center fst-italic fs-4">Введи свое имя и подбери кольцо</p>
                     <br><br>
@@ -37,7 +35,6 @@
                     <br><br>
             </div>
         </div>
-<%--            </div>--%>
         <div class="container">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                 <div class="col-md-4 d-flex align-items-center">

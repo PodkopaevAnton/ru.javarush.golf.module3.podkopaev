@@ -9,7 +9,7 @@ public class QuestionRepository {
     private final List<Question> questions = new ArrayList<>();
 
     public QuestionRepository() {
-        questions.add(new Question(1,"Обернувшись,ты увидел своего друга. Показать ему находку?"));
+        questions.add(new Question(1,"Обернувшись,ты увидел своего друга. Показать ему свою находку?"));
         questions.add(new Question(2,"Гендальф рассказал тебе про это кольцо. Он предложил тебе отнести его в Ривенделл.Ты согласен?"));
         questions.add(new Question(3,"Путь был тяжелый, но ты справился. С тобой были твои верные друзья. В городе был созван совет. Необходимо уничтожить кольцо. Что ты сделаешь?"));
         questions.add(new Question(4,"Ты стал частью братства. Ваш путь очень опасен. По какой дороге вы хотите идти?"));

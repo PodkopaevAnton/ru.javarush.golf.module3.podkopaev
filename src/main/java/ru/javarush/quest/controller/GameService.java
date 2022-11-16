@@ -1,4 +1,4 @@
-package ru.javarush.quest;
+package ru.javarush.quest.controller;
 
 import ru.javarush.quest.entities.Question;
 import ru.javarush.quest.repositories.AnswerRepository;
