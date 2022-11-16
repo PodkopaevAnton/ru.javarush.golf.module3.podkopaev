@@ -10,26 +10,34 @@
 
 </head>
     <body>
-    <div class="startPage" >
-        <h1 class="text-center"><%= "Пролог" %>
-        </h1>
-        <p class="text-center" >В Хоббитании дела шли своим чередом. Люди там жили веселые и отходчивые.
-            Раздные праздники были для них особой усладой. Сегодня как раз один из таких! На такое событие приехал
-            ваш старый знакомый. Высокий старик с большой шляпой и посохом. Пир был на весь мир,и в пылу ты потерял своего дядю!
-        </p>
-        <h1 class="text-center"><%= "Интересная находка"%></h1>
-        <p class="text-center">Ты быстрее побежал домой. Открыв дверь, ты обнаружил на полу необычное колечко.</p>
+            <div class="startPage" >
+                    <h1 class="text-center fw-bold"><%= "Пролог" %>
+                    </h1>
+                    <p class="text-center" >В Хоббитании дела шли своим чередом. Люди там жили веселые и отходчивые.
+                        Раздные праздники были для них особой усладой. Сегодня как раз один из таких! На такое событие приехал
+                        ваш старый знакомый. Высокий старик с большой шляпой и посохом. Пир был на весь мир,и в пылу ты потерял своего дядю!
+                    </p>
+                    <h1 class="text-center fw-bold"><%= "Интересная находка"%></h1>
+                    <p class="text-center">Ты быстрее побежал домой. Открыв дверь, ты обнаружил на полу необычное колечко.</p>
 
-        <p class="text-center">Введи свое имя и подбери кольцо</p>
-        <br><br>
-        <form action="hello-servlet" method="get">
-            <input hidden name="id" value="1">
-            <div class="d-grid gap-2 col-6 mx-auto">
-                    <label for="input_name_new" >Имя:</label>
-                    <input type="text" id="input_name_new" name="name" required size ="12" maxLength="12" >
-                <button  type="submit" class="btn btn-warning " name="countGames" value="0">Подобрать</button>
+                    <p class="text-center fst-italic fs-4">Введи свое имя и подбери кольцо</p>
+                    <br><br>
+                    <form action="hello-servlet" method="get">
+                        <input hidden name="id" value="1">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                                <label for="input_name_new" >Имя:</label>
+                                <input type="text" id="input_name_new" name="name" required size ="12" maxLength="12" >
+                            <button  type="submit" class="btn btn-warning ">Подобрать</button>
+                        </div>
+                    </form>
+                    <br><br>
             </div>
-        </form>
-    </div>
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-3 mb-md-0 text-muted"></span>
+                </div>
+            </footer>
+        </div>
 </body>
 </html>
