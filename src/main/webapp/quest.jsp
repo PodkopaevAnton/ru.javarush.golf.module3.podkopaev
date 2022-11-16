@@ -21,35 +21,43 @@
 <%--        <div class="shadow-lg p-3 mb-5 bg-body rounded">--%>
                 <div class="row-align-items-center">
                     <div class = "col-9"></div>
-                    <br><br>
-                    <h2 class="text-center fw-bold">${question}</h2>
-                    <br><br>
-                    <form action="hello-servlet" method="get" class="serv">
-                        <c:forEach items="${answers.keySet()}" var="answer">
-                            <div class="form-check">
-                                <label class="form-check-label"><input type="radio" name="id" value="${answers.get(answer)}" checked> ${answer}</label>
-                            </div>
-                        </c:forEach>
-                        <p>
+                        <br><br>
+                        <h2 class="text-center fw-bold">${question}</h2>
+                        <br><br>
+                        <form action="hello-servlet" method="get" class="serv">
+                            <c:forEach items="${answers.keySet()}" var="answer">
+                                <div class="form-check">
+                                    <label class="form-check-label"><input type="radio" name="id" value="${answers.get(answer)}" checked> ${answer}</label>
+                                </div>
+                            </c:forEach>
+                            <p>
 
-                            <div class="d-grid gap-2 col-6 mx-auto">
-                                <button type="submit" class="btn btn-warning">${answers == null ? "Заново" :"Выбрать"}</button>
-                            </div>
-                        </p>
-                    </form>
+                                <div class="d-grid gap-2 col-6 mx-auto">
+                                    <button type="submit" class="btn btn-warning">${answers == null ? "Заново" :"Выбрать"}</button>
+                                </div>
+                            </p>
+                        </form>
                     </div>
                 </div>
 <%--        </div>--%>
+    <section class="info">
+        <p class="fs-5">Статистика:</p>
+        <p class="fs-6">Имя в игре: ${name}</p>
+        <p class="fs-6">id сессии: ${sessionId}</p>
+        <p class="fs-6">ip address: ${sessionIp}</p>
+        <p class="fs-6">Количество игр: ${counter}</p>
+    </section>
     </div>
-<br>
+
+
 <%--    <div class="shadow-sm p-3 mb-5 bg-body rounded">--%>
-        <section class="info">
-            <p class="fs-5">Статистика:</p>
-            <p class="fs-6">Имя в игре: ${name}</p>
-            <p class="fs-6">id сессии: ${sessionId}</p>
-            <p class="fs-6">ip address: ${sessionIp}</p>
-            <p class="fs-6">Количество игр: ${counter}</p>
-        </section>
+<%--        <section class="info">--%>
+<%--            <p class="fs-5">Статистика:</p>--%>
+<%--            <p class="fs-6">Имя в игре: ${name}</p>--%>
+<%--            <p class="fs-6">id сессии: ${sessionId}</p>--%>
+<%--            <p class="fs-6">ip address: ${sessionIp}</p>--%>
+<%--            <p class="fs-6">Количество игр: ${counter}</p>--%>
+<%--        </section>--%>
 <%--    </div>--%>
     </body>
 </html>
