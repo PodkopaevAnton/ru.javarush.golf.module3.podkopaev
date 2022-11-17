@@ -1,9 +1,11 @@
 package ru.javarush.quest.entities;
 
+
+
 public class Answer {
-    private int id;
-    private String text;
-    private Integer nextQuestionId;
+    private final int id;
+    private final String text;
+    private final Integer nextQuestionId;
 
     public Answer(int id, String text, Integer nextQuestionId) {
         this.id = id;
@@ -21,4 +23,5 @@ public class Answer {
     public int getNextQuestionId(){
         return nextQuestionId;
     }
+
 }

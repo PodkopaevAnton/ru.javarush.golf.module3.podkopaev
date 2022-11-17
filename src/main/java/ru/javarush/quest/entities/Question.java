@@ -1,8 +1,8 @@
 package ru.javarush.quest.entities;
 
 public class Question {
-    private int id;
-    private String text;
+    private final int id;
+    private final String text;
 
 
     public Question(int id, String text){

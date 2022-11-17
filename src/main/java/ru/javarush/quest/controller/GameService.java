@@ -4,7 +4,6 @@ import ru.javarush.quest.entities.Question;
 import ru.javarush.quest.repositories.AnswerRepository;
 import ru.javarush.quest.repositories.QuestionRepository;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;

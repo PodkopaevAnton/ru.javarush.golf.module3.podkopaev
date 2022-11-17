@@ -24,11 +24,11 @@
 
                     <p class="text-center fst-italic fs-4">Введи свое имя и подбери кольцо</p>
                     <br><br>
-                    <form action="hello-servlet" method="get">
+                    <form action="gameServlet" method="get">
                         <input hidden name="id" value="1">
                         <div class="d-grid gap-2 col-6 mx-auto">
                                 <label for="input_name_new" >Имя:</label>
-                                <input type="text" id="input_name_new" name="name" required size ="12" maxLength="12" >
+                                <input type="text" id="input_name_new" name="name" required size ="12" maxLength="12" class="shadow-sm p-3 mb-5 bg-body rounded">
                             <button  type="submit" class="btn btn-warning ">Подобрать</button>
                         </div>
                     </form>
