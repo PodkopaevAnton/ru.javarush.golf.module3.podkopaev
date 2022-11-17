@@ -24,8 +24,6 @@
 <%--            margin-right: -50%;--%>
 <%--            transform: translate(-50%, -50%) }--%>
 <%--    </style>--%>
-<<<<<<< HEAD
-=======
         <style>
             section{
                 border: 3px solid black;
@@ -35,7 +33,6 @@
                 left: 10%
             }
         </style>
->>>>>>> f1b362a (second)
     <body>
 <%--    </section>--%>
         <h2 class="text-center">${question}</h2>
@@ -48,17 +45,12 @@
             </c:forEach>
 <%--        </section>--%>
             <p>
-<<<<<<< HEAD
-=======
 
->>>>>>> f1b362a (second)
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <button type="submit" class="btn btn-warning">${answers == null ? "Заново" :"Выбрать"}</button>
                 </div>
             </p>
         </form>
-<<<<<<< HEAD
-=======
 <br>
     <section class="info">
         <p>Статистика:</p>
@@ -67,7 +59,6 @@
         <p >ip address: ${sessionIp}</p>
         <p >Количество игр: ${countGames}</p>
     </section>
->>>>>>> f1b362a (second)
 <%--    </section>--%>
     </body>
 </html>

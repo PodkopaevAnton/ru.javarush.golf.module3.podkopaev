@@ -11,8 +11,6 @@ target/
 *.iws
 *.iml
 *.ipr
-<<<<<<< HEAD
-=======
 
 ### Eclipse ###
 .apt_generated
@@ -38,4 +36,3 @@ build/
 
 ### Mac OS ###
 .DS_Store
->>>>>>> f1b362a (second)
